@@ -1,0 +1,23 @@
+#surefire
+#Tue Aug 23 19:19:46 EDT 2016
+testClassesDirectory=/home/apprentice/NetBeansProjects/VendingMachine/target/test-classes
+classPathUrl.4=/home/apprentice/NetBeansProjects/ConsoleIO/target/classes
+forkMode=once
+classPathUrl.3=/home/apprentice/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+classPathUrl.2=/home/apprentice/.m2/repository/junit/junit/4.12/junit-4.12.jar
+useManifestOnlyJar=true
+classPathUrl.1=/home/apprentice/NetBeansProjects/VendingMachine/target/classes
+classPathUrl.0=/home/apprentice/NetBeansProjects/VendingMachine/target/test-classes
+reportsDirectory=/home/apprentice/NetBeansProjects/VendingMachine/target/surefire-reports
+providerConfiguration=org.apache.maven.surefire.junit4.JUnit4Provider
+testSuiteDefinitionTestSourceDirectory=/home/apprentice/NetBeansProjects/VendingMachine/src/test/java
+requestedTest=DaoTest
+surefireClassPathUrl.1=/home/apprentice/.m2/repository/org/apache/maven/surefire/surefire-api/2.10/surefire-api-2.10.jar
+surefireClassPathUrl.0=/home/apprentice/.m2/repository/org/apache/maven/surefire/surefire-junit4/2.10/surefire-junit4-2.10.jar
+runOrder=filesystem
+useSystemClassLoader=true
+isTrimStackTrace=true
+enableAssertions=true
+failIfNoTests=true
+includes0=**/DaoTest.java
+childDelegation=false
