@@ -7,10 +7,9 @@ package com.mycompany.addressbookweb.controllers;
 
 import com.mycompany.addressbookweb.dao.AddressBookDao;
 import com.mycompany.addressbookweb.dto.Address;
-import java.util.Map;
 import javax.inject.Inject;
+import javax.validation.Valid;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,30 +40,9 @@ public class AddressController {
         return a;
     }
 
-//    @RequestMapping(value = "edit/{id}", method = RequestMethod.GET)
-//    public String edit(@PathVariable("id") Integer addressId, Map model) {
-//
-//        Address c = addressDao.read(addressId);
-//
-//        model.put("address", c);
-//
-//        return "edit";
-//    }
-
-    @RequestMapping(value = "delete/{id}", method = RequestMethod.GET)
-    public String delete(@PathVariable("id") Integer addressId, Map model) {
-
-        Address c = addressDao.read(addressId);
-
-        model.put("address", c);
-
-        return "delete";
-
-    }
-
     @RequestMapping(value = "", method = RequestMethod.POST)
     @ResponseBody
-    public Address add(@RequestBody Address address) {
+    public Address add(@Valid@RequestBody Address address) {
 
         Address a = addressDao.create(address);
 
@@ -76,7 +54,6 @@ public class AddressController {
     public void deleteSubmit(@RequestBody Address address) {
 
         addressDao.delete(address);
-
 
     }
 

@@ -5,17 +5,30 @@
  */
 package com.mycompany.addressbookweb.dto;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 /**
  *
  * @author apprentice
  */
 public class Address {
     
+    @NotEmpty(message = "Please enter first name")
     private String firstName;
+    
+    @NotEmpty(message = "Please enter last name")
     private String lastName;
+    
+    @NotEmpty(message = "Please enter street address")
     private String street;
+    
+    @NotEmpty(message = "Please enter city")
     private String city;
+   
+    @NotEmpty(message = "Please enter state")
     private String state;
+    
+    @NotEmpty(message = "Please enter zip code")
     private String zip;
     
     private int id;

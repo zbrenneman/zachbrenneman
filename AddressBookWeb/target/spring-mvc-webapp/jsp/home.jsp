@@ -39,7 +39,7 @@
                     <c:forEach items="${addressList}" var="address">
                         <tr id="address-row-${address.id}">
                             <td><a data-toggle="modal" data-target="#showAddressModal" data-address-id="${address.id}">${address.firstName} ${address.lastName}</a></td>
-                            <td>${address.city} ${address.state}</td>
+                            <td>${address.city}  ${address.state}</td>
                             <td><a data-toggle="modal" data-target="#editAddressModal" data-address-id="${address.id}">Edit</a></td>
                             <td><a data-toggle="modal" data-target="#deleteAddressModal" data-address-id="${address.id}">Delete</a></td>
                         </tr>
@@ -76,6 +76,8 @@
                         <label>Zip code:</label>
                         <sf:input class="form-control" type="text" path="zip" id="zipCreate"/>
                     </div>
+
+                    <div id="add-address-validation-errors"></div>
 
                     <input id="createAddressButton" class ="btn" type="submit" value="Submit" /> 
                 </sf:form>

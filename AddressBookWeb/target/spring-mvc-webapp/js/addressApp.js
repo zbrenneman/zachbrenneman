@@ -47,12 +47,20 @@ $(document).ready(function () {
                 $('#cityCreate').val('');
                 $('#stateCreate').val('');
                 $('#zipCreate').val('');
+                $('#add-address-validation-errors').text('');
 
 
 
             },
             error: function (data, status) {
-                console.log("Error")
+                
+                var errors = data.responseJSON.errors;
+                
+                $.each(errors, function(index, error){
+                    
+                    $('#add-address-validation-errors').append(error.message + "<br/>");
+                    
+                });
 
             }
             

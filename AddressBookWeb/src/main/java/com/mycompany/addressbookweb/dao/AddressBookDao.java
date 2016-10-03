@@ -19,7 +19,11 @@ public interface AddressBookDao {
     public void update(Address address);
     public Address read(Integer id);
     public List<Address> all();
-    public List<Address> decode();
-    public void encode();
+    public List<Address> searchByFirstName(String search);
+    public List<Address> searchByLastName(String search);
+    public List<Address> searchByStreet(String search);
+    public List<Address> searchByCity(String search);
+    public List<Address> searchByState(String search);
+    public List<Address> searchByZip(String search);
     
 }
